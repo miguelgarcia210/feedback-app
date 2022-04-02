@@ -1,4 +1,5 @@
 import Header from "./components/Header"
+import FeedBackitem from "./components/FeedBackitem"
 
 const App = () => {
     return (
@@ -6,7 +7,7 @@ const App = () => {
             <Header />
 
             <div className="container">
-                <h1>My Other App</h1>
+                <FeedBackitem />
             </div>
         </>
     )
