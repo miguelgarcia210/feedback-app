@@ -1,20 +1,21 @@
-import { useState } from "react"
+import PropTypes from "prop-types"
+import Card from "./shared/Card"
 
-const FeedBackitem = () => {
-
-    const [rating, setRating] = useState(7);
-    const [text, setText] = useState("This is an example of a feebback item");
-
+const FeedbackItem = ({item}) => {
   return (
-    <div className="card">
+    <Card reverse={true}>
         <div className="num-display">
-            {rating}
+            {item.rating}
         </div>
         <div className="text-display">
-            {text}
+            {item.text}
         </div>
-    </div>
+    </Card>
   )
 }
 
-export default FeedBackitem
+FeedbackItem.propTypes = {
+  item: PropTypes.object.isRequired,
+}
+
+export default FeedbackItem
